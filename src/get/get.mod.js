@@ -1,32 +1,10 @@
+import ko from './ko.fn.js';
+import ok from './ok.fn.js';
+
+
 const get = (
 
     _ => get
-
-);
-
-
-const ko = (
-
-    (key, object) => (
-
-        // difference from ?. is this one will return null for null object
-        null === object
-            ? null
-            : object?.[key]
-    )
-
-);
-
-
-const ok = (
-
-    (object, key) => (
-
-        // difference from ?. is this one will return null for null object
-        null === object
-            ? null
-            : object?.[key]
-    )
 
 );
 

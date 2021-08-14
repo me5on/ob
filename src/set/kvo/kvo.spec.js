@@ -1,10 +1,11 @@
+/* eslint-disable prefer-destructuring,  no-magic-numbers */
+
+
 import {describe, expect, it} from '@jest/globals';
-import set from './set.mod.js';
+import kvo from './kvo.fn.js';
 
 
 describe('OB.set.kvo', () => {
-
-    const kvo = set.kvo;
 
     it(
         'is a function',
@@ -13,15 +14,14 @@ describe('OB.set.kvo', () => {
 
     it('does not modify the provided object', () => {
 
-            const object = {a: 1, b: 2};
-            const expected = {a: 1, b: 2, c: 3};
+        const object = {a: 1, b: 2};
+        const expected = {a: 1, b: 2, c: 3};
 
-            const actual = kvo('c', 3, object);
+        const actual = kvo('c', 3, object);
 
-            expect(actual).not.toBe(object);
-            expect(actual).toEqual(expected);
-        },
-    );
+        expect(actual).not.toBe(object);
+        expect(actual).toEqual(expected);
+    });
 
     it.each([
         [3, 'c', {a: 1, b: 2}, {a: 1, b: 2, c: 3}],

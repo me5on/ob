@@ -1,6 +1,7 @@
 import del from './del/del.mod.js';
 import get from './get/get.mod.js';
 import nav from './nav/nav.fn.js';
+import neo from './neo/neo.fn.js';
 import set from './set/set.mod.js';
 
 
@@ -14,10 +15,13 @@ const ob = (
 Object.assign(
     ob,
     {
+        // modules
         get,
         set,
         del,
+        // functions
         nav,
+        neo,
     },
 );
 

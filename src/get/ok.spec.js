@@ -1,10 +1,11 @@
+/* eslint-disable prefer-destructuring,  no-magic-numbers */
+
+
 import {describe, expect, it} from '@jest/globals';
-import get from './get.mod.js';
+import ok from './ok.fn.js';
 
 
-describe(`OB.get.ok`, () => {
-
-    const ok = get.ok;
+describe('OB.get.ok', () => {
 
     it(
         'is a function',
@@ -21,7 +22,11 @@ describe(`OB.get.ok`, () => {
     );
 
     it.each([
+        ['a', null, null],
         ['b', {a: 1, b: 2, c: 3}, 2],
+        ['c', void (1), void (1)],
+        ['d', {a: 1, b: 2, c: 3}, void (1)],
+        ['e', {a: 1, b: 2, e: null}, null],
     ])(
         'gets %p from %p resulting %p',
         (key, object, expected) => expect(ok(object, key)).toEqual(expected),

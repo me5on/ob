@@ -1,48 +1,12 @@
+import ko$ from './ko$.fn.js';
+import ko from './ko.fn.js';
+import ok$ from './ok$.fn.js';
+import ok from './ok.fn.js';
+
+
 const del = (
 
     _ => del
-
-);
-
-
-const ko = (
-
-    (key, object) => {
-        object = {...object};
-        delete object[key];
-        return object;
-    }
-
-);
-
-
-const ko$ = (
-
-    (key, object) => {
-        delete object[key];
-        return object;
-    }
-
-);
-
-
-const ok = (
-
-    (object, key) => {
-        object = {...object};
-        delete object[key];
-        return object;
-    }
-
-);
-
-
-const ok$ = (
-
-    (object, key) => {
-        delete object[key];
-        return object;
-    }
 
 );
 

@@ -1,4 +1,4 @@
-import get from '../get/get.mod.js';
+import get from '../get/ok.fn.js';
 
 
 const DOT = '.';
@@ -7,16 +7,16 @@ const {isArray} = Array;
 const isString = $ => String($) === $;
 
 
-const navigate = (
+const nav = (
 
     (path, object) => (
 
         isArray(path)
-            ? path.reduce(get.ok, object)
+            ? path.reduce(get, object)
             : (
                 isString(path) && path.includes(DOT)
-                    ? navigate(path.split(DOT), object)
-                    : get.ok(object, path)
+                    ? nav(path.split(DOT), object)
+                    : get(object, path)
             )
 
     )
@@ -24,4 +24,4 @@ const navigate = (
 );
 
 
-export default navigate;
+export default nav;

@@ -1,135 +1,23 @@
 // noinspection DuplicatedCode
 
 
+import kov$ from './kov/kov$.fn.js';
+import kov from './kov/kov.fn.js';
+import kvo$ from './kvo/kvo$.fn.js';
+import kvo from './kvo/kvo.fn.js';
+import okv$ from './okv/okv$.fn.js';
+import okv from './okv/okv.fn.js';
+import ovk$ from './ovk/ovk$.fn.js';
+import ovk from './ovk/ovk.fn.js';
+import vko$ from './vko/vko$.fn.js';
+import vko from './vko/vko.fn.js';
+import vok$ from './vok/vok$.fn.js';
+import vok from './vok/vok.fn.js';
+
+
 const set = (
 
     _ => set
-
-);
-
-
-const kov = (
-
-    (key, object, value) => {
-        object = {...object};
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const kov$ = (
-
-    (key, object, value) => {
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const kvo = (
-
-    (key, value, object) => {
-        object = {...object};
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const kvo$ = (
-
-    (key, value, object) => {
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const okv = (
-
-    (object, key, value) => {
-        object = {...object};
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const okv$ = (
-
-    (object, key, value) => {
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const ovk = (
-
-    (object, value, key) => {
-        object = {...object};
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const ovk$ = (
-
-    (object, value, key) => {
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const vko = (
-
-    (value, key, object) => {
-        object = {...object};
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const vko$ = (
-
-    (value, key, object) => {
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const vok = (
-
-    (value, object, key) => {
-        object = {...object};
-        object[key] = value;
-        return object;
-    }
-
-);
-
-
-const vok$ = (
-
-    (value, object, key) => {
-        object[key] = value;
-        return object;
-    }
 
 );
 

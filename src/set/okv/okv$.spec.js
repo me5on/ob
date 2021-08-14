@@ -1,10 +1,11 @@
+/* eslint-disable prefer-destructuring,  no-magic-numbers */
+
+
 import {describe, expect, it} from '@jest/globals';
-import set from './set.mod.js';
+import okv$ from './okv$.fn.js';
 
 
 describe('OB.set.okv$', () => {
-
-    const okv$ = set.okv$;
 
     it(
         'is a function',
@@ -13,15 +14,14 @@ describe('OB.set.okv$', () => {
 
     it('modifies the provided object', () => {
 
-            const object = {a: 1, b: 2};
-            const expected = {a: 1, b: 2, c: 3};
+        const object = {a: 1, b: 2};
+        const expected = {a: 1, b: 2, c: 3};
 
-            const actual = okv$(object, 'c', 3);
+        const actual = okv$(object, 'c', 3);
 
-            expect(actual).toBe(object);
-            expect(actual).toEqual(expected);
-        },
-    );
+        expect(actual).toBe(object);
+        expect(actual).toEqual(expected);
+    });
 
     it.each([
         [3, 'c', {a: 1, b: 2}, {a: 1, b: 2, c: 3}],

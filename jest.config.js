@@ -11,10 +11,10 @@ export default ({
     coverageReporters: [
         'json',
         'lcov',
-        'text',
         'text-summary',
     ],
 
+    collectCoverageFrom: ['src/**/*.js'],
 
     transform: {},
 

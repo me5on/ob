@@ -3,7 +3,7 @@
     "sourceType": "module"
   },
   "extends": [
-    "@azhder/eslint-config-azder"
+    "@sloy/eslint-config-recommended"
   ],
   "globals": {
     "Symbol": false,

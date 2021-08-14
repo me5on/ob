@@ -1,3 +1,6 @@
+/* eslint-disable no-magic-numbers */
+
+
 import {describe, expect, it} from '@jest/globals';
 import nav from './nav.fn.js';
 

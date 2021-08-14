@@ -1,10 +1,11 @@
+/* eslint-disable prefer-destructuring,  no-magic-numbers */
+
+
 import {describe, expect, it} from '@jest/globals';
-import del from './del.mod.js';
+import ko$ from './ko$.fn.js';
 
 
 describe('OB.del.ko$', () => {
-
-    const ko$ = del.ko$;
 
     it(
         'is a function',
