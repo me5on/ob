@@ -1,6 +1,4 @@
-// noinspection DuplicatedCode
-
-
+/* eslint-disable import/max-dependencies */
 import kov$ from './kov/kov$.fn.js';
 import kov from './kov/kov.fn.js';
 import kvo$ from './kvo/kvo$.fn.js';

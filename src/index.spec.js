@@ -1,4 +1,4 @@
-/* eslint-disable new-cap */
+/* eslint-disable new-cap,max-lines-per-function */
 
 
 import {describe, expect, it} from '@jest/globals';
@@ -7,14 +7,15 @@ import OB from './index.js';
 
 describe('library OB', () => {
 
+    const mods = ['get', 'set', 'del'];
+    const funs = ['nav', 'neo'];
+
     it(
         'OB returns itself for trivial call',
         () => void expect(OB()).toBe(OB),
     );
 
-    const names = ['get', 'set', 'del'];
-
-    describe.each(names)('module', name => { // eslint-disable-line no-shadow
+    describe.each(mods)('module', name => { // eslint-disable-line no-shadow
 
         describe(`OB.${name}`, () => {
 
@@ -35,13 +36,17 @@ describe('library OB', () => {
         });
     });
 
-    describe('nav', () => {
+    describe.each(funs)('function', name => { // eslint-disable-line no-shadow
+        describe(`OB.${name}`, () => {
 
-        it(
-            'is a function',
-            () => void expect(OB.nav).toBeFun('nav'),
-        );
+            const fn = OB[name];
 
+            it(
+                'is a function',
+                () => void expect(fn).toBeFun(name),
+            );
+
+        });
     });
 
 });

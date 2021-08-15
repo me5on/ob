@@ -25,5 +25,4 @@ Object.assign(
     },
 );
 
-
 export default ob;
