@@ -7,7 +7,7 @@ import OB from './index.js';
 
 describe('library OB', () => {
 
-    const mods = ['get', 'set', 'del'];
+    const mods = ['get', 'set', 'del', 'inf'];
     const funs = ['nav', 'neo'];
 
     it(
